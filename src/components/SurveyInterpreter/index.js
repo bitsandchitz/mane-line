@@ -202,7 +202,9 @@ class SurveyInterpreter extends Component {
       return (
         <div className='textobjectcontainer row'>
           {this.showQuestionnaire(this.props.questionnaire.item)}
-          <button className="survey-submit-button"> Submit </button>
+          <span className="text-center">
+            <button className="survey-submit-button"> Submit </button>
+          </span>
           {this.showVersionNumber()}
         </div>
       )
