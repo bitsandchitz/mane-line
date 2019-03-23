@@ -29,7 +29,7 @@
       {
         "linkId": "MANE_Q1",
         "definition": "",
-        "prefix": "Insured",
+        "prefix": "Insurance Coverage",
         "text": "The following question concerns your current health insurance coverage status.",
         "type": "group",
         "enableWhen": [],
