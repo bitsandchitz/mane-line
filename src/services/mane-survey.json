@@ -1,0 +1,219 @@
+{
+  "questionnaire": {
+    "identifier": [
+      {
+        "use": "",
+        "type": {
+          "coding": [
+            {
+              "system": "",
+              "version": "",
+              "code": "",
+              "display": "QuestionnaireId"
+            }
+          ],
+          "text": ""
+        },
+        "system": "",
+        "value": "questionnaire_id",
+        "period": "",
+        "assigner": ""
+      }
+    ],
+    "version": "1.0",
+    "name": "",
+    "title": "Healthcare Demographic Survey and Classifier",
+    "description" : "This survey asks for your view about your demographic and medical history information. This information will help us keep track of your health in relation to your demographic, medical history, and current circumstances. Answer every question by selecting the appropriate response. If you are unsure about how to answer a question, please give the best answer you can.",
+    "status": "draft",
+    "item": [
+      {
+        "linkId": "MANE_Q1",
+        "definition": "",
+        "prefix": "Insured",
+        "text": "The following question concerns your current health insurance coverage status.",
+        "type": "group",
+        "enableWhen": [],
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q1.1",
+            "prefix": "1",
+            "text": "Are you currently enrolled in a health insurance plan?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "MANE",
+                  "code": "MANE_LINE.011",
+                  "display": "Yes"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "MANE",
+                  "code": "MANE_LINE.012",
+                  "display": "No"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "MANE",
+                  "code": "MANE_LINE.013",
+                  "display": "Not Sure"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "MANE_Q2",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Gender",
+        "text": "What is your gender?",
+        "type": "group",
+        "enableWhen": [],
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q2.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "2",
+            "text": "Male or Female?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Female",
+                  "code": "KOOS_Q2.1LA137-2"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Male",
+                  "code": "KOOS_Q2.1LA6752-5"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "MANE_Q3",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Age Range",
+        "text": "The following questions concern your age",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q3.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Rising from sitting",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "0-12",
+                  "code": "KOOS_Q3.1LA137-2"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "13-25",
+                  "code": "KOOS_Q3.1LA6752-5"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "25-40",
+                  "code": "KOOS_Q3.1LA6751-7"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q3.1LA6750-9"
+                }
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q3.1LA11912-5"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
