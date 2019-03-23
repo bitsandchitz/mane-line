@@ -17,9 +17,9 @@ class SurveyInterpreter extends Component {
     this.sweetScroll = new SweetScroll({
       // trigger: '[data-scroll]',       // Selector for trigger (must be a valid css selector)
       // header: '[data-scroll-header]', // Selector or Element for fixed header (Selector of must be a valid css selector)
-      duration: 600,                 // Specifies animation duration in integer
+      duration: 1000,                 // Specifies animation duration in integer
       easing: 'easeInOutCubic',         // Ease options => https://www.npmjs.com/package/sweet-scroll#easings
-      offset: -200,                      // Specifies the value to offset the scroll position in pixels
+      offset: -150,                      // Specifies the value to offset the scroll position in pixels
       vertical: true,                 // Enable the vertical scroll
       horizontal: false,              // Enable the horizontal scroll
       cancellable: false,              // When fired wheel or touchstart events to stop scrolling
@@ -201,6 +201,8 @@ class SurveyInterpreter extends Component {
       // console.log("RE-RENDERING ...", );
       return (
         <div className='textobjectcontainer row'>
+          <h3 className=""> {this.props.questionnaire.title} </h3> {/* //TODO: STLYE this class */}
+          <p className="survey-desc">{ this.props.questionnaire.description}</p>  {/* //TODO: STLYE this class */}
           {this.showQuestionnaire(this.props.questionnaire.item)}
           <button className="survey-submit-button"> Submit </button>
           {this.showVersionNumber()}

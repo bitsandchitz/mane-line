@@ -42,6 +42,6 @@
 }
 
 /* spacing for auto scrolling between questions in a group */
-/* .questionnaire-item ~ .questionnaire-item{
-  margin-top: 200px;
-} */
+.questionnaire-item ~ .questionnaire-item{
+  margin-top: 400px;
+}

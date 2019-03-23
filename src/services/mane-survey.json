@@ -40,7 +40,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q1.1",
+            "linkId": "MANE_Q1.1",
             "prefix": "1",
             "text": "Are you currently enrolled in a health insurance plan?",
             "type": "choice",
@@ -93,7 +93,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q2.1",
+            "linkId": "MANE_Q2.1",
             "definition": "",
             "code": [
               {
@@ -117,14 +117,14 @@
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "Female",
-                  "code": "KOOS_Q2.1LA137-2"
+                  "code": "MANE_Q2.1LA137-2"
                 }
               },
               {
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "Male",
-                  "code": "KOOS_Q2.1LA6752-5"
+                  "code": "MANE_Q2.1LA6752-5"
                 }
               }
             ]
@@ -155,7 +155,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q3.1",
+            "linkId": "MANE_Q3.1",
             "definition": "",
             "code": [
               {
@@ -179,35 +179,35 @@
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "0-12",
-                  "code": "KOOS_Q3.1LA137-2"
+                  "code": "MANE_Q3.1LA137-2"
                 }
               },
               {
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "13-25",
-                  "code": "KOOS_Q3.1LA6752-5"
+                  "code": "MANE_Q3.1LA6752-5"
                 }
               },
               {
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "25-40",
-                  "code": "KOOS_Q3.1LA6751-7"
+                  "code": "MANE_Q3.1LA6751-7"
                 }
               },
               {
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "40-55",
-                  "code": "KOOS_Q3.1LA6750-9"
+                  "code": "MANE_Q3.1LA6750-9"
                 }
               },
               {
                 "valueCoding": {
                   "system": "LOINC",
                   "display": "55+",
-                  "code": "KOOS_Q3.1LA11912-5"
+                  "code": "MANE_Q3.1LA11912-5"
                 }
               }
             ]
@@ -238,7 +238,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q4.1",
+            "linkId": "MANE_Q4.1",
             "definition": "",
             "code": [
               {
@@ -311,7 +311,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q5.1",
+            "linkId": "MANE_Q5.1",
             "definition": "",
             "code": [
               {
@@ -384,7 +384,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q6.1",
+            "linkId": "MANE_Q6.1",
             "definition": "",
             "code": [
               {
@@ -442,7 +442,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q7.1",
+            "linkId": "MANE_Q7.1",
             "definition": "",
             "code": [
               {
@@ -515,7 +515,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q8.1",
+            "linkId": "MANE_Q8.1",
             "definition": "",
             "code": [
               {
@@ -588,7 +588,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q9.1",
+            "linkId": "MANE_Q9.1",
             "definition": "",
             "code": [
               {
@@ -661,7 +661,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q10.1",
+            "linkId": "MANE_Q10.1",
             "definition": "",
             "code": [
               {
@@ -719,7 +719,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q11.1",
+            "linkId": "MANE_Q11.1",
             "definition": "",
             "code": [
               {
@@ -787,7 +787,7 @@
         "initial": [],
         "item": [
           {
-            "linkId": "KOOS_Q12.1",
+            "linkId": "MANE_Q12.1",
             "definition": "",
             "code": [
               {
