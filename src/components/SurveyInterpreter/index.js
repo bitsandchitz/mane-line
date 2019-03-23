@@ -104,6 +104,7 @@ class SurveyInterpreter extends Component {
       if ( scrollTarget >= activeQs.length ) {
         return;
       }
+      console.log(`scrolling from ${linkId} to ${'#'+activeQs[scrollTarget].replaceAll('.', '_')}` );
       this.sweetScroll.to('#'+activeQs[scrollTarget].replaceAll('.', '_')); // dots are not legal id chars
     }
     
@@ -178,8 +179,11 @@ class SurveyInterpreter extends Component {
     if (items) {
       let questionnaire = items.map((item) => {
         if ( isItemEnabled(item, this.state) ) {
+          if ( !this.state.requiredAnswers.includes(item.linkId) && item.type !== 'group' ) {
+            this.state.requiredAnswers.push(item.linkId)
+          }
           return (
-            <div key={item.linkId} className="col-12 questionnaire-item">
+            <div key={item.linkId} id={item.linkId.replaceAll('.','_')} className="col-12 questionnaire-item">
               {this.showItem(item)}
               <div className="row">
                 {this.showQuestionnaire(item.item)}

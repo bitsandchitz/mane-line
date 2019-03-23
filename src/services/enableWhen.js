@@ -31,6 +31,7 @@ export const isItemEnabled = (item, state) => {
       }
       // update the currently display question linkIds
       validation(item.linkId, isEnabled, state.requiredAnswers);
+      return isEnabled
     } else {
       // if no enable whens are present, enabled by default
       // updateRequiredAnswersArray(item, true, inputState)

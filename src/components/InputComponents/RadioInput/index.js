@@ -26,6 +26,9 @@ class RadioInput extends Component {
 
   onChange(item, valueString, score) {
     this.props.onChange(item, valueString, score);
+    if ( this.props.scroll ) {
+      this.props.scroll(this.props.item.linkId)
+    }
     this.setState({
       selectedOption: valueString
     });
