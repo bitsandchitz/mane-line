@@ -288,7 +288,7 @@
         ]
       }, 
       {
-        "linkId": "MANE_Q5",
+        "linkId": "MANE_Q6",
         "definition": "",
         "code": [
           {
@@ -454,7 +454,7 @@
               }
             ],
             "prefix": "6",
-            "text": "Have you ever suffered from one or more of the following illnesses? Check all that apply.",
+            "text": "Have you ever suffered from one or more of the following heath conditions? Check all that apply.",
             "type": "check-box",
             "enableWhen": [],
             "enableBehavior": "any",

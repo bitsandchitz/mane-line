@@ -19,7 +19,7 @@ class SurveyInterpreter extends Component {
       // header: '[data-scroll-header]', // Selector or Element for fixed header (Selector of must be a valid css selector)
       duration: 1000,                 // Specifies animation duration in integer
       easing: 'easeInOutCubic',         // Ease options => https://www.npmjs.com/package/sweet-scroll#easings
-      offset: -150,                      // Specifies the value to offset the scroll position in pixels
+      offset: -350,                      // Specifies the value to offset the scroll position in pixels
       vertical: true,                 // Enable the vertical scroll
       horizontal: false,              // Enable the horizontal scroll
       cancellable: false,              // When fired wheel or touchstart events to stop scrolling
@@ -92,7 +92,7 @@ class SurveyInterpreter extends Component {
 
       this.setState({
           answers: newAnswer
-      }, this.recalculateScore());
+      });
   }
 
   showItem = (item) => {
@@ -171,9 +171,31 @@ class SurveyInterpreter extends Component {
     );
   }
 
-  isSubmitDisabled = () => {
-    return false; // always enabled
+  submitSurvey = () => {
+    let questionnaireResponse = {
+      identifier : {
+        system: "HACKCLT",
+        value: "907123765893407"
+      },
+      questionnaire: this.props.questionnaire.identifier,
+      status: 'completed',
+      subject: this.props.questionnaire.title,
+      source: {
+        id: 'Patient/947838367438'
+      },
+      item: Object.keys(this.state.answers).map((linkId) => {
+        return {
+          linkId: linkId,
+          text: this.state.answers[linkId].item.text,
+          answer: this.state.answers[linkId].answer
+        }
+      })
+    };
+
+    console.info("successfully submiting questionnaire response", questionnaireResponse);
+
   }
+
 
   showQuestionnaire = (items) => {
     if (items) {
@@ -205,7 +227,7 @@ class SurveyInterpreter extends Component {
           <p className="survey-desc">{ this.props.questionnaire.description}</p>  {/* //TODO: STLYE this class */}
           {this.showQuestionnaire(this.props.questionnaire.item)}
           <span className="text-center">
-            <button className="survey-submit-button"> Submit </button>
+            <button className="survey-submit-button" onClick={this.submitSurvey}> Submit </button>
           </span>
           {this.showVersionNumber()}
         </div>

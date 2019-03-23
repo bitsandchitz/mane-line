@@ -12,7 +12,7 @@
 }
 
 .question-prefix {
-  padding-right: 18px;
+  padding-right: 0px;
   font-weight: normal;
 }
 
@@ -38,10 +38,14 @@
 
 .foster-score {
   font-size: 25px;
-  padding : 0 15px
+  padding : 0 15px;
+}
+
+.survey-desc {
+  margin-bottom: 200px;
 }
 
 /* spacing for auto scrolling between questions in a group */
 .questionnaire-item ~ .questionnaire-item{
-  margin-top: 400px;
+  margin-top: 500px;
 }
