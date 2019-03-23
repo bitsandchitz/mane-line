@@ -50,7 +50,7 @@ class TextInput extends Component {
         <div className={textStyle + " col-12 col-sm-8 col-md-6"} >
           <p className="question-text">{item.text}</p>
             {/* <label> label </label><br/> */}
-            <input className={this.state.isValid ? "" : "not-valid"} ref={id => this.input = id } onChange={(e) => this.handleChange(e)} value={this.props.value} placeholder={this.state.placeholder} type="text"/>
+            <input className={this.state.isValid ? "" : "not-valid"} ref={id => this.input = id } onChange={(e) => this.handleChange(e)} value={this.props.value} type="text"/>
         </div>
       </div>
     )

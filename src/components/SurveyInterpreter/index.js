@@ -191,11 +191,8 @@ class SurveyInterpreter extends Component {
         }
       })
     };
-
     console.info("successfully submiting questionnaire response", questionnaireResponse);
-
   }
-
 
   showQuestionnaire = (items) => {
     if (items) {
