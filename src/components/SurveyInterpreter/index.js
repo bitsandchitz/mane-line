@@ -204,7 +204,9 @@ class SurveyInterpreter extends Component {
           <h3 className=""> {this.props.questionnaire.title} </h3> {/* //TODO: STLYE this class */}
           <p className="survey-desc">{ this.props.questionnaire.description}</p>  {/* //TODO: STLYE this class */}
           {this.showQuestionnaire(this.props.questionnaire.item)}
-          <button className="survey-submit-button"> Submit </button>
+          <span className="text-center">
+            <button className="survey-submit-button"> Submit </button>
+          </span>
           {this.showVersionNumber()}
         </div>
       )
