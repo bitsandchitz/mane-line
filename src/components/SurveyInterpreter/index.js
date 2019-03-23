@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import TextObject from '../InputComponents/TextObject';
 import TextInput from '../InputComponents/TextInput';
 import CheckboxContainer from '../InputComponents/CheckboxContainer';
-import SignaturePadApp from '../InputComponents/SignaturePadApp';
 import DateInput from '../InputComponents/DateInput';
 import DropdownInput from '../InputComponents/DropdownInput';
 import RadioInput from '../InputComponents/RadioInput';
+import { isItemEnabled } from '../../services/enableWhen';
 import SweetScroll from 'sweet-scroll';
 import { integerValidation, decimalValidation, urlValidation } from '../../services/validationPatterns';
 import './styles.css';
@@ -34,9 +34,79 @@ class SurveyInterpreter extends Component {
       complete: null,
       step: null,
     })
+
+    this.state = {
+      answers: {
+          // <linkId> : {
+          //     item: {},
+          //     answer: [{}], 
+          //     score: number 
+          // }
+      },
+      requiredAnswers: [
+          // enabled & required linkIds 
+          // added and removed as the change enable states
+      ],
+  };
+  }
+
+  //sets the entire answerStructure shown above. answer item coming in should be an array
+  setAnswer = (item, answer, { append, score } = {append: false, score: undefined}) => {
+    let linkId = item.linkId
+    let newAnswer = this.state.answers;
+
+    if ( append === true ) { // if append call we want an array of answers
+        if ( newAnswer[linkId] && newAnswer[linkId].answer ) {
+            newAnswer[linkId].answer.push(answer); // push next answer
+        } else {
+            newAnswer[linkId] = { // initialize the answer array
+                item,
+                answer : [answer],
+                score : score ? score : 0
+            }
+        }
+    } else { // if single answer question
+        newAnswer[linkId] = {
+            item,
+            answer : answer,
+            score : score ? score : 0
+        }
+    }
+    this.setState({
+        answers : newAnswer,
+    })
+  }
+
+
+  //removes the whole linkId key from the answer object
+  removeAnswer = (item, valueString) => {
+      let linkId = item.linkId || item; // can pass item or linkId
+      
+      let newAnswer = this.state.answers;
+      if ( valueString ) {
+          newAnswer[linkId].answer = newAnswer[linkId].answer.filter(ans => ans !== valueString);
+      } else {
+          // delete the property from the object
+          delete newAnswer[linkId]
+      }
+
+      this.setState({
+          answers: newAnswer
+      }, this.recalculateScore());
   }
 
   showItem = (item) => {
+    // set up scroll func
+    let scrollFunc = (linkId) => { 
+      console.log("asnwered ", linkId); 
+      let activeQs = this.state.requiredAnswers;
+      let scrollTarget = activeQs.indexOf(linkId)+1;
+      if ( scrollTarget >= activeQs.length ) {
+        return;
+      }
+      this.sweetScroll.to('#'+activeQs[scrollTarget].replaceAll('.', '_')); // dots are not legal id chars
+    }
+    
     // this function takes an item and then looks at the item.type field of the
     // item and then calls the appropriate method to return the correct input object
     // fall through is currently intentional until we further implement components
@@ -55,54 +125,34 @@ class SurveyInterpreter extends Component {
 
 
       case 'decimal':
-        return <TextInput item={item} onChange={this.inputContainer.setAnswer} pattern={decimalValidation} />
+        return <TextInput item={item} onChange={this.setAnswer} pattern={decimalValidation} />
       case 'integer':
-        return <TextInput item={item} onChange={this.inputContainer.setAnswer} pattern={integerValidation} />
+        return <TextInput item={item} onChange={this.setAnswer} pattern={integerValidation} />
 
 
-      case 'time':
-      case 'dateTime':
-        console.warn(`item.type ${item.type} in NOT yet implemented -- fallback : date`);
       case 'date':
         // TODO: the input is overloaded to handle text and date input
         // TODO : implement a dateTime, and time component (could overload)
-        return <DateInput item={item} onChange={this.inputContainer.setAnswer} />
+        return <DateInput item={item} onChange={this.setAnswer} />
 
 
       case 'url':
-        return <TextInput item={item} onChange={this.inputContainer.setAnswer} isUrl={true} pattern={urlValidation} />
+        return <TextInput item={item} onChange={this.setAnswer} isUrl={true} pattern={urlValidation} />
 
       case 'text':
         // currently rendering as text input
         // TODO: implement url validation
-        return <TextInput item={item} onChange={this.inputContainer.setAnswer} />
-
-
-
-      case 'attachment':
-        console.warn(`item.type ${item.type} in NOT yet implemented -- fallback : signature`);
-      case 'signature':
-        // attachment is rendering as signature
-        // TODO: expand to allow signatures and file attachments
-        // show signature pad for type attachment
-        return <SignaturePadApp item={item} validation={this.props.validation} onRef={ref => this.signature_pad_app = ref} updateSignature={this.inputContainer.setAnswer} removeSignature={this.inputContainer.removeAnswer} />
+        return <TextInput item={item} onChange={this.setAnswer} />
 
 
       case 'radio-button':
       case 'choice':
-        return <RadioInput item={item} validation={this.props.validation}
-          onChange={this.inputContainer.setAnswer} validation={this.inputContainer.validation}
-        />
+        return <RadioInput item={item} scroll={scrollFunc} onChange={this.setAnswer} />
       case 'drop-down':
-        return <DropdownInput item={item} onChange={this.inputContainer.setAnswer} />
+        return <DropdownInput item={item} onChange={this.setAnswer} />
       case 'check-box':
-        return <CheckboxContainer item={item} validation={this.props.validation} addCheckbox={this.inputContainer.setAnswer} removeCheckbox={this.inputContainer.removeAnswer} />
+        return <CheckboxContainer item={item} addCheckbox={this.setAnswer} removeCheckbox={this.removeAnswer} />
 
-
-      case 'discrete-slider':
-      case 'continuos-slider':
-        console.warn(`item.type ${item.type} in NOT yet implemented -- fallback : NONE`);
-        break;
 
       default:
         console.error(`item.type "${item.type}" in NOT recognized, please fix type or add new type`, item)
@@ -127,14 +177,16 @@ class SurveyInterpreter extends Component {
   showQuestionnaire = (items) => {
     if (items) {
       let questionnaire = items.map((item) => {
-        return (
-          <div key={item.linkId} className="col-12 questionnaire-item">
-            {this.showItem(item)}
-            <div className="row">
-              {this.showQuestionnaire(item.item)}
+        if ( isItemEnabled(item, this.state) ) {
+          return (
+            <div key={item.linkId} className="col-12 questionnaire-item">
+              {this.showItem(item)}
+              <div className="row">
+                {this.showQuestionnaire(item.item)}
+              </div>
             </div>
-          </div>
-        );
+          );
+        }
       })
       return questionnaire
     }
@@ -146,7 +198,7 @@ class SurveyInterpreter extends Component {
       return (
         <div className='textobjectcontainer row'>
           {this.showQuestionnaire(this.props.questionnaire.item)}
-          <button className="survey-submit-button" > Submit </button>
+          <button className="survey-submit-button"> Submit </button>
           {this.showVersionNumber()}
         </div>
       )
@@ -157,10 +209,6 @@ class SurveyInterpreter extends Component {
       )
     }
   }
-
-
-
-
 
 }
 

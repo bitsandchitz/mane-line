@@ -55,6 +55,7 @@ class RadioInput extends Component {
         </p>
         <div className="radio-options" >
           {this.props.item.answerOption.map((option, index) => {
+            let activeClass = option.valueCoding.display === this.state.selectedOption ? " active" : "";
             return (
               <div key={index} className="radio-container">
                 {/* <label>
@@ -63,7 +64,7 @@ class RadioInput extends Component {
                     value={option.valueCoding.display} />
                   {option.valueCoding.display}
                 </label> */}
-                <button type="button" className="btn radio-button-option"
+                <button type="button" className={"btn radio-button-option"+activeClass}
                   onClick={() => this.onChange(this.props.item, option.valueCoding.display, this.getAnswerScore(option))}>
                   {option.valueCoding.display}
                 </button>

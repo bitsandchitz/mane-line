@@ -1,3 +1,19 @@
+
+
+.radio-button-option  {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  font-family: 'UHC Sans';
+  font-weight:bold !important;
+  border: 1px solid #196ECF !important;
+  background-color: #FFF !important;
+  color: #196ECF !important;
+  border-radius: 0px !important;
+  height: 30px;
+  font-size: 20px;
+}
+
 /* Hide the browser's default radio button */
 .radio-container {
   font-size: 18px;
@@ -13,21 +29,9 @@
   cursor: pointer;
 }
 
-.radio-button-option  {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  font-family: 'UHC Sans';
-  font-weight:bold !important;
-  border: 1px solid #196ECF !important;
-  background-color: #FFF !important;
-  color: #196ECF !important;
-  border-radius: 0px !important;
-}
-
-.radio-button-option.radio:checked{
+.radio-button-option.active {
   background-color: #196ECF !important;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 /* Hide the browser's default radio button */
@@ -93,3 +97,4 @@
   padding-left: 18px;
   font-weight: normal;
 }
+

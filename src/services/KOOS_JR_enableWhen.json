@@ -1,0 +1,1019 @@
+{
+  "questionnaire": {
+    "identifier": [
+      {
+        "use": "",
+        "type": {
+          "coding": [
+            {
+              "system": "",
+              "version": "",
+              "code": "",
+              "display": "QuestionnaireId"
+            }
+          ],
+          "text": ""
+        },
+        "system": "",
+        "value": "questionnaire_id",
+        "period": "",
+        "assigner": ""
+      }
+    ],
+    "version": "1.0",
+    "name": "Knee Injury and Osteoarthritis Outcome Score for Joint Replacement (KOOS, JR.)",
+    "title": "KOOS, JR. Knee Survey",
+    "status": "draft",
+    "item": [
+      {
+        "linkId": "KOOS_Q1",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Stiffness",
+        "text": "The following question concerns the amount of joint stiffness you have experienced during the last week in your knee. Stiffness is a sensation of restriction or slowness in the ease with which you move your knee joint.",
+        "type": "group",
+        "enableWhen": [],
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q1.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "1",
+            "text": "How severe is your knee stiffness after first wakening in the morning?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "code": "KOOS_Q1.1LA137-2",
+                  "display": "None"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q1.1LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q1.1LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q1.1LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q1.1LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "KOOS_Q2",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Pain",
+        "text": "What amount of knee pain have you experienced the last week during the following activities?",
+        "type": "group",
+        "enableWhen": [
+          {
+            "question" : "KOOS_Q1.1",
+            "operator" : "exists"
+          }
+        ],
+        "enableBehavior": "all",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q2.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "2",
+            "text": "Twisting/pivoting on your knee",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q2.1LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q2.1LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q2.1LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q2.1LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q2.1LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "linkId": "KOOS_Q2.2",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "3",
+            "text": "Straightening knee fully",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q2.2LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q2.2LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q2.2LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueString": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q2.2LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueString": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q2.2LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueString": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "linkId": "KOOS_Q2.3",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "4",
+            "text": "Going up or down stairs",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q2.3LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q2.3LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q2.3LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q2.3LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q2.3LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueString": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "linkId": "KOOS_Q2.4",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "5",
+            "text": "Standing upright",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q2.4LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q2.4LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q2.4LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q2.4LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q2.4LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "KOOS_Q3",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Function, daily living",
+        "text": "The following questions concern your physical function. By this we mean your ability to move around and to look after yourself. For each of the following activities please indicate the degree of difficulty you have experienced in the last week due to your knee.",
+        "type": "group",
+        "enableWhen": [
+          {
+            "question" : "KOOS_Q2.1",
+            "operator" : "exists"
+          },{
+            "question" : "KOOS_Q2.2",
+            "operator" : "exists"
+          },{
+            "question" : "KOOS_Q2.3",
+            "operator" : "exists"
+          },{
+            "question" : "KOOS_Q2.4",
+            "operator" : "exists"
+          }
+        ],
+        "enableBehavior": "all",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q3.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Rising from sitting",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q3.1LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q3.1LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q3.1LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q3.1LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q3.1LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "linkId": "KOOS_Q3.2",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "7",
+            "text": "Bending to floor/pick up an object",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "None",
+                  "code": "KOOS_Q3.2LA137-2"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 0
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA137-2"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Mild",
+                  "code": "KOOS_Q3.2LA6752-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6752-5"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Moderate",
+                  "code": "KOOS_Q3.2LA6751-7"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6751-7"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Severe",
+                  "code": "KOOS_Q3.2LA6750-9"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA6750-9"
+                  }
+                ]
+              },
+              {
+                "valueCoding": {
+                  "system": "LOINC",
+                  "display": "Extreme",
+                  "code": "KOOS_Q3.2LA11912-5"
+                },
+                "extension": [
+                  {
+                    "url": "answerValue",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "displayOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "answer_id",
+                    "valueString": "LA11912-5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
