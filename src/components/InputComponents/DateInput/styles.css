@@ -1,0 +1,63 @@
+.date-input {
+  display: block;
+  max-width: 50%;
+  color: #425563;
+}
+
+.date-input label {
+  font-size: 22px;
+  color: #425563;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.date-input input:focus { 
+  -webkit-box-shadow: 0 0 0 3px #ffaf1b;
+  box-shadow: 0 0 0 3px #ffaf1b;
+  border: 1px solid #4a8bca; 
+}
+
+input[type="text"] {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: arial, sans-serif;
+  border:1px solid #dedfe0;
+  padding: 3px;
+}
+
+input[type="text"], focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  width: 100%;
+  font-size: 22px;
+  font-family: arial, sans-serif;
+}
+
+.safari-date-input {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  line-height: 25px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: #425563;
+  border: 1px solid rgba(69, 84, 107,0.25);
+  margin-bottom: 8px;
+}
+
+.safari-date-input-valid:focus {
+  box-shadow: 0 0 5px green !important;
+  border: 1px solid green !important;
+}
+
+.safari-date-input-invalid {
+  box-shadow: 0 0 5px red !important;
+  border: 1px solid red !important;
+}
+
+.react-datepicker__input-container {
+  display: block;
+  font-size: 22px;
+}

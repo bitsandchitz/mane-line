@@ -1,0 +1,64 @@
+.text-input {
+  display: block;
+  padding-top: 24px;
+  margin-right : 25px;
+  max-width: 50%;
+}
+
+.text-input:nth-child(1) {
+  margin-left: 0;
+}
+
+.text-input label, label.form-label {
+  font-size: 1.6rem;
+  color: #45546b;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+  min-width: 300px !important;
+}
+
+.text-input input {
+	width: 100%;
+	font-size: 19px;
+	line-height: 25px;
+	padding: 4px 8px;
+	border-radius: 3px;
+	color: #425563;
+  border: 1px solid rgba(69, 84, 107,0.25);
+  margin-bottom: 8px;
+}
+
+.text-input input:hover {
+  border: 1px solid #4a8bca;
+}
+
+/* .text-input input:focus {
+  outline: 1px solid;
+  outline-color: #ffaf1b;
+  /* outline-offset: 0.5px;
+  outline-width: 2px;
+} */
+
+.text-input input:focus { 
+  -webkit-box-shadow: 0 0 0 3px #ffaf1b;
+  box-shadow: 0 0 0 3px #ffaf1b;
+  border: 1px solid #4a8bca; 
+}
+
+.required-asterisk {
+  display: inline-block;
+  padding: 0 1rem;
+  color: #dd2509;
+  font-size: 1.3rem;
+  line-height: 0;
+  font-family: "Zapf Dingbats", arial, sans-serif;
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+.not-valid {
+  border: 3px solid #dd2509 !important;
+}

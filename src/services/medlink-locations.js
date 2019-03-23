@@ -103,9 +103,9 @@ export default [
 
 // NC MedAssistP704-536-17905Q4428 Taggart Creek Rd., Suite 101, Charlotte, NC 28208www.medassist.org
 
-Free pharmacy program for uninsured residents of NCProject 658/
+// Free pharmacy program for uninsured residents of NCProject 658/
 
-Smith Family Wellness CenterP704-910-58109R3622 Central Avenue, Charlotte, NC 28205www.SmithFamilyWellnessCenter.com
-Shelter Health ServicesP704-334-000013, 26S534 Spratt St., Charlotte, NC 28206www.shelterhealthservices.com
+// Smith Family Wellness CenterP704-910-58109R3622 Central Avenue, Charlotte, NC 28205www.SmithFamilyWellnessCenter.com
+// Shelter Health ServicesP704-334-000013, 26S534 Spratt St., Charlotte, NC 28206www.shelterhealthservices.com
 
-Services for Salvation Army Center of Hope Residents
+// Services for Salvation Army Center of Hope Residents

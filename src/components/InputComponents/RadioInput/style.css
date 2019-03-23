@@ -1,0 +1,95 @@
+/* Hide the browser's default radio button */
+.radio-container {
+  font-size: 18px;
+  color: #434448;
+  letter-spacing: 0;
+  white-space: pre-wrap;
+  position: relative;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.radio-button-option  {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  font-family: 'UHC Sans';
+  font-weight:bold !important;
+  border: 1px solid #196ECF !important;
+  background-color: #FFF !important;
+  color: #196ECF !important;
+  border-radius: 0px !important;
+}
+
+.radio-button-option.radio:checked{
+  background-color: #196ECF !important;
+  color: #FFF;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  display:none;
+  cursor: pointer;
+}
+  
+.radio-container label{
+  display: block;
+  margin-bottom: .5rem;
+  border: 1px solid #196ECF;
+  text-align: center;
+  margin: 3px 1px;
+  align-content: center;
+  font-weight: bold;
+  color:#196ECF;
+  cursor:pointer;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+  
+.radio-container input:checked ~ .radio-checkmark {
+  display: block;
+  background-color: #005EB8;
+}
+
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.option-label {
+  padding-left: 18px;
+  font-weight: normal;
+}

@@ -1,0 +1,47 @@
+.textobjectcontainer {
+  margin: 0px 0px 0px 0px;
+}
+
+.question-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #2D2D39;
+  display: block;
+  font-weight: bold;
+}
+
+.question-prefix {
+  padding-right: 18px;
+  font-weight: normal;
+}
+
+.version-num{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #3E3E3E;
+  letter-spacing: 0;
+  margin-top:50px;
+}
+.print-button{
+  float: left;
+  width: 30%;
+  margin-left: 40%;
+}
+.col-sm-4{
+  position: relative;
+}
+.input-col{
+  /* position: absolute; */
+  bottom: 0;
+}
+
+.foster-score {
+  font-size: 25px;
+  padding : 0 15px
+}
+
+/* spacing for auto scrolling between questions in a group */
+/* .questionnaire-item ~ .questionnaire-item{
+  margin-top: 450px;
+} */
