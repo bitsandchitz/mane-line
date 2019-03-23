@@ -84,7 +84,7 @@
         ],
         "prefix": "Gender",
         "text": "What is your gender?",
-        "type": "group",
+        "type": "choice",
         "enableWhen": [],
         "required": true,
         "repeats": false,
@@ -144,7 +144,7 @@
           }
         ],
         "prefix": "Age Range",
-        "text": "The following questions concern your age",
+        "text": "The following question concerns your age",
         "type": "group",
         "enableWhen": [],
         "enableBehavior": "any",
@@ -167,7 +167,7 @@
               }
             ],
             "prefix": "6",
-            "text": "Rising from sitting",
+            "text": "What is your age range?",
             "type": "choice",
             "enableWhen": [],
             "enableBehavior": "any",
@@ -227,7 +227,7 @@
           }
         ],
         "prefix": "Age Range",
-        "text": "The following questions concern your age",
+        "text": "The following question concerns your age",
         "type": "group",
         "enableWhen": [],
         "enableBehavior": "any",
@@ -260,42 +260,562 @@
             "answerOption": [
               {
                 "valueCoding": {
-                  "system": "LOINC",
-                  "display": "0-12",
-                  "code": "KOOS_Q3.1LA137-2"
+                  "display": "0-12"
                 }
               },
               {
                 "valueCoding": {
-                  "system": "LOINC",
-                  "display": "13-25",
-                  "code": "KOOS_Q3.1LA6752-5"
+                  "display": "13-25"
                 }
               },
               {
                 "valueCoding": {
-                  "system": "LOINC",
-                  "display": "25-40",
-                  "code": "KOOS_Q3.1LA6751-7"
+                  "display": "25-40"
                 }
               },
               {
                 "valueCoding": {
-                  "system": "LOINC",
-                  "display": "40-55",
-                  "code": "KOOS_Q3.1LA6750-9"
+                  "display": "40-55"
                 }
               },
               {
                 "valueCoding": {
-                  "system": "LOINC",
-                  "display": "55+",
-                  "code": "KOOS_Q3.1LA11912-5"
+                  "display": "55+"
                 }
               }
             ]
           }
         ]
+      },
+      {
+        "linkId": "MANE_Q5",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Ethnicity",
+        "text": "The following question concerns your ethnicity",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q5.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "What is your ethnicity? Select all that apply",
+            "type": "check-box",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "African American"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "White"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "American Indian or Native Alaskan"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Asian"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Native Hawaiian or Pacific Islander"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q5",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Transportation",
+        "text": "The following question concerns your access to transportation",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q6.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Do you have access to reliable transportation?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Yes"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "No"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q7",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Doctor Visit",
+        "text": "The following question concerns your last visit to the doctor",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q7.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "When was your last visit to the Dr?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Less than 6 months ago"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "6 months to 1 year ago"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "1 year to 2 years ago"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "2 years to 5 years ago"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "More thaan 5 years ago"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q8",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Medical History",
+        "text": "The following question concerns your medical history",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q8.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Have you ever suffered from one or more of the following illnesses? Check all that apply.",
+            "type": "check-box",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Heart Disease"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Cancer"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Diabetes"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "High Blood Pressure"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Any mental health issues"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q9",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Family Medical History",
+        "text": "The following question concerns your immediate families medical history",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q9.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Has anyone in your immediate family ever suffered from one or more of the following illnesses? Check all that apply.",
+            "type": "check-box",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Heart Disease"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Cancer"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Diabetes"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "High Blood Pressure"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Any mental health issues"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q10",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Drug Use",
+        "text": "The following question concerns any illicit drug use",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q10.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "Do you currently use any illicit substances, or medications that would otherwise need to be obtained with the prescription of a doctor?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Yes"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "No"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q11",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Overall Health",
+        "text": "The following question concerns your opinion on the state of your overall health.",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q11.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "How would you describe your general health, overall?",
+            "type": "choice",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Excellent"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Good"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Fair"
+                }
+              },
+              {
+                "valueCoding": {
+                  "display": "Poor"
+                }
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "linkId": "MANE_Q12",
+        "definition": "",
+        "code": [
+          {
+            "system": "",
+            "version": "",
+            "code": "",
+            "display": "",
+            "userSelected": false
+          }
+        ],
+        "prefix": "Zipcode",
+        "text": "The following question concerns your residential zipcode",
+        "type": "group",
+        "enableWhen": [],
+        "enableBehavior": "any",
+        "required": true,
+        "repeats": false,
+        "readOnly": false,
+        "answerOption": [],
+        "initial": [],
+        "item": [
+          {
+            "linkId": "KOOS_Q12.1",
+            "definition": "",
+            "code": [
+              {
+                "system": "",
+                "version": "",
+                "code": "",
+                "display": "",
+                "userSelected": false
+              }
+            ],
+            "prefix": "6",
+            "text": "What is your current zipcode?",
+            "type": "text",
+            "enableWhen": [],
+            "enableBehavior": "any",
+            "required": true,
+            "repeats": false,
+            "readOnly": false,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "display": "Zip Code"
+                }
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 }
